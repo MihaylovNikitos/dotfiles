@@ -29,8 +29,6 @@ set noswapfile
 
 
 " Leader & Mappings {{{
-"
-"let mapleader=","   " leader is comma
 let g:mapleader = ","
 
 " edit/reload vimrc
