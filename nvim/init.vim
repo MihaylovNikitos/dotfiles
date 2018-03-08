@@ -11,6 +11,9 @@ Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 
+Plug 'airblade/vim-gitgutter'
+Plug 'jreybert/vimagit'
+
 call plug#end()
 
 " Colors {{{
