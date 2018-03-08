@@ -23,6 +23,7 @@ download_font:
 	rm -rf fonts && git clone https://github.com/powerline/fonts.git --depth=1
 	(cd fonts && ./install.sh)
 	rm -rf fonts
+	mkdir -p ~/.fonts
 	curl "https://raw.githubusercontent.com/Gonzih/inconsolata-lgc-for-powerline/master/Inconsolata%20LGC%20for%20Powerline.ttf" > ~/.fonts/Inconsolata_LGC_for_Powerline.ttf
 	sudo fc-cache -rfv
 	echo "Fonts install!"
