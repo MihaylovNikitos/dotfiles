@@ -29,3 +29,14 @@ download_font:
 
 install_silversearcher:
 	sudo apt-get install silversearcher-ag
+
+install_zsh:
+	sudo apt-get update
+	sudo apt-get install zsh
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	chsh -s $(which zsh)
+
+link_zsh:
+	ln -sv ${DOTFILES_DIR}/zsh/zsh.conf ~/.zshrc || echo "Error link ~/.zshrc!"
+	ln -sv ${DOTFILES_DIR}/zsh/dp-theme.zsh-theme ~/.oh-my-zsh/themes/dp-theme.zsh-theme || echo "Error link zsh theme!"
+	source ~/.zshrc
