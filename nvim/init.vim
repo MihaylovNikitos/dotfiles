@@ -3,15 +3,18 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'easymotion/vim-easymotion'
-Plug 'mhartington/oceanic-next'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
 " Colors {{{
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
 syntax enable                " enable syntax processing
-colorscheme OceanicNext
-"set background=dark
+
+set background=dark
+let g:gruvbox_contrast_dark = 'soft'
+colorscheme gruvbox
+
 " }}} Colors
 
 " UI Config {{{
@@ -33,6 +36,6 @@ let g:mapleader = ","
 
 " edit/reload vimrc
 nmap <leader>ev :e $MYVIMRC<CR>
-nmap <leader>sv :so $MYVIMRC<CR>
+nmap <leader>rv :so $MYVIMRC<CR>
 "
 " }}} 
