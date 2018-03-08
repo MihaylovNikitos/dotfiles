@@ -19,3 +19,9 @@ install_nvim:
 link_nvim:
 	ln -sv ${DOTFILES_DIR}/nvim ~/.config/nvim || echo "Not link neovim config"
 
+download_font:
+	rm -rf fonts && git clone https://github.com/powerline/fonts.git --depth=1
+	(cd fonts && ./install.sh)
+	rm -rf fonts
+	sudo fc-cache -rfv
+	echo "Font Monaco install!"
