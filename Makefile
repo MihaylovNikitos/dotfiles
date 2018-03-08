@@ -27,3 +27,5 @@ download_font:
 	sudo fc-cache -rfv
 	echo "Fonts install!"
 
+install_silversearcher:
+	sudo apt-get install silversearcher-ag

@@ -5,6 +5,12 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'easymotion/vim-easymotion'
 Plug 'morhetz/gruvbox'
 
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'rking/ag.vim'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
+
 call plug#end()
 
 " Colors {{{
@@ -37,6 +43,23 @@ let g:mapleader = ","
 " Moving between long wrap line
 nnoremap j gj
 nnoremap k gk
+
+" Navigation
+let g:NERDTreeWinPos = "right"
+map <silent> <C-n> :NERDTreeFocus<CR>
+
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
 
 " edit/reload vimrc
 nmap <leader>ev :e $MYVIMRC<CR>
