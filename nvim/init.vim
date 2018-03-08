@@ -34,6 +34,10 @@ set noswapfile
 " Leader & Mappings {{{
 let g:mapleader = ","
 
+" Moving between long wrap line
+nnoremap j gj
+nnoremap k gk
+
 " edit/reload vimrc
 nmap <leader>ev :e $MYVIMRC<CR>
 nmap <leader>rv :so $MYVIMRC<CR>
