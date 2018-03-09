@@ -41,3 +41,7 @@ link_zsh:
 	ln -sv ${DOTFILES_DIR}/zsh/zsh.conf ~/.zshrc || echo "Error link ~/.zshrc!"
 	ln -sv ${DOTFILES_DIR}/zsh/dp-theme.zsh-theme ~/.oh-my-zsh/themes/dp-theme.zsh-theme || echo "Error link zsh theme!"
 	source ~/.zshrc
+
+link_git:
+	ln -sv ${DOTFILES_DIR}/git/git.conf ~/.gitconfig || echo "Error link git!"
+
