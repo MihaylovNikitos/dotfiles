@@ -47,7 +47,15 @@ let g:mapleader = ","
 nnoremap j gj
 nnoremap k gk
 
-" Navigation
+" Soft scroll
+set scrolloff=8
+set sidescroll=1
+set sidescrolloff=15
+
+" Autocenter on matched
+noremap n nzz
+noremap N Nzz
+
 let g:NERDTreeWinPos = "right"
 map <silent> <C-n> :NERDTreeFocus<CR>
 
