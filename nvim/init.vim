@@ -76,6 +76,9 @@ let g:NERDTreeIndicatorMapCustom = {
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <ESC>:w<CR>
 
+" Open Magnit
+nnoremap <C-m> :Magit<CR>
+
 " edit/reload vimrc
 nmap <leader>ev :e $MYVIMRC<CR>
 nmap <leader>rv :so $MYVIMRC<CR>
