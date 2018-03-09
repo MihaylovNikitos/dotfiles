@@ -1,3 +1,5 @@
+export EDITOR=vim
+
 # Search / Grep
 alias higrep="history | ag --color"
 alias psgrep="ps aux | ag --color"
@@ -22,11 +24,11 @@ alias mkcd="_mkcd"
 alias myip="ifconfig -v eth0 | grep 'inet addr:'"
 
 # Shell
-alias zshr="${EDITOR} ~/.zshr"
+alias zshrc="${EDITOR} ~/.zshrc"
 alias reload="exec ${SHELL}"
 
 # Other
-alias ehosts="sudo $EDITOR /etc/hosts"
+alias ehosts="sudo ${EDITOR} /etc/hosts"
 
 # Include local aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
