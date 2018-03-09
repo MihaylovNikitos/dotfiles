@@ -1,0 +1,32 @@
+# Search / Grep
+alias higrep="history | ag --color"
+alias psgrep="ps aux | ag --color"
+
+function _hilast(){ echo -n "Show last $1 grep by '$2':\n" && fc -El 0 | grep ${2:-''} | tail -n${1:-10} }
+alias hilast="_hilast"
+
+# Command line head / tail shortcuts
+alias -g H="| head"
+alias -g T="| tail"
+alias -g G="| ag"
+alias -g L="| less"
+
+# Dir / Files
+alias home="cd ~/"
+alias ls="ls -lahF --color=always"
+
+function _mkcd(){ mkdir -p $1 && cd $1 }
+alias mkcd="_mkcd"
+
+# Network
+alias myip="ifconfig -v eth0 | grep 'inet addr:'"
+
+# Shell
+alias zshr="${EDITOR} ~/.zshr"
+alias reload="exec ${SHELL}"
+
+# Other
+alias ehosts="sudo $EDITOR /etc/hosts"
+
+# Include local aliases
+[[ -f ~/.aliases.local ]] && source ~/.aliases.local

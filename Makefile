@@ -45,3 +45,7 @@ link_zsh:
 link_git:
 	ln -sv ${DOTFILES_DIR}/git/git.conf ~/.gitconfig || echo "Error link git!"
 
+link_aliases:
+	ln -sv ${DOTFILES_DIR}/other/aliases ~/.aliases || echo "Error link aliases!"
+	touch ~/.aliases.local
+
