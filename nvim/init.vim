@@ -1,5 +1,7 @@
+" Fix form xfce4-terminal
 :set guicursor=
 
+" Plugin for vim
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'easymotion/vim-easymotion'
@@ -16,17 +18,16 @@ Plug 'jreybert/vimagit'
 
 call plug#end()
 
-" Colors {{{
+" Colors
 let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
-syntax enable                " enable syntax processing
+syntax enable
 
+" Set colorscheme
 set background=dark
 let g:gruvbox_contrast_dark = 'soft'
 colorscheme gruvbox
 
-" }}} Colors
-
-" UI Config {{{
+" UI Config
 set hidden
 set number                   " show line number
 set showcmd                  " show command in bottom bar
@@ -37,10 +38,8 @@ set laststatus=2             " window will always have a status line
 set nobackup
 set noswapfile
 "let &colorcolumn="140,".join(range(119,999),",")
-" }}} UI Config
 
-
-" Leader & Mappings {{{
+" Leader & Mappings
 let g:mapleader = ","
 
 " Moving between long wrap line
@@ -56,6 +55,7 @@ set sidescrolloff=15
 noremap n nzz
 noremap N Nzz
 
+" NERDtree
 let g:NERDTreeWinPos = "right"
 map <silent> <C-n> :NERDTreeFocus<CR>
 
@@ -75,5 +75,4 @@ let g:NERDTreeIndicatorMapCustom = {
 " edit/reload vimrc
 nmap <leader>ev :e $MYVIMRC<CR>
 nmap <leader>rv :so $MYVIMRC<CR>
-"
-" }}} 
+
