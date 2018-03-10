@@ -55,6 +55,15 @@ set sidescrolloff=15
 noremap n nzz
 noremap N Nzz
 
+" Windows config
+set winwidth=79
+set winheight=5
+set winminheight=5
+
+" Always focus on splited window
+nnoremap <C-w>s <C-w>s<C-w>w
+nnoremap <C-w>v <C-w>v<C-w>w
+
 " NERDtree
 let g:NERDTreeWinPos = "right"
 map <silent> <C-n> :NERDTreeFocus<CR>
