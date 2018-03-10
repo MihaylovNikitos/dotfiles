@@ -10,8 +10,8 @@ Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'rking/ag.vim'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'jreybert/vimagit'
@@ -82,6 +82,9 @@ nnoremap <C-w>v <C-w>v<C-w>w
 " NERDtree
 let g:NERDTreeWinPos = "right"
 map <silent> <C-n> :NERDTreeFocus<CR>
+
+" Close vim if open only NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "✹",
