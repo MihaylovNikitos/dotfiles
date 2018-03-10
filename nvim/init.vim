@@ -44,6 +44,16 @@ set relativenumber
 autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
 
+" Search / replace
+set gdefault " By default add g flag to search/replace. Add g to toggle.
+set hlsearch " Highlight searches
+set incsearch " Highlight dynamically as pattern is typed.
+set ignorecase " Ignore case of searches.
+set smartcase " Ignore 'ignorecase' if search pattern contains uppercase characters.
+
+" Toogle hlsearch
+nnoremap <F3> :set hlsearch!<CR>
+
 " Leader & Mappings
 let g:mapleader = ","
 
