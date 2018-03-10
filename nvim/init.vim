@@ -30,6 +30,11 @@ set background=dark
 let g:gruvbox_contrast_dark = 'soft'
 colorscheme gruvbox
 
+" Base config
+set title
+set nobackup
+set noswapfile
+
 " UI Config
 set hidden
 set number                   " show line number
@@ -38,8 +43,6 @@ set showcmd                  " show command in bottom bar
 set wildmenu                 " visual autocomplete for command menu
 set showmatch                " highlight matching brace
 set laststatus=2             " window will always have a status line
-set nobackup
-set noswapfile
 "let &colorcolumn="140,".join(range(119,999),",")
 
 " Show absolute numbers in insert mode, otherwise relative line numbers
