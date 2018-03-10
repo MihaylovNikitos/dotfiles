@@ -39,6 +39,11 @@ set nobackup
 set noswapfile
 "let &colorcolumn="140,".join(range(119,999),",")
 
+" Show absolute numbers in insert mode, otherwise relative line numbers
+set relativenumber
+autocmd InsertEnter * :set norelativenumber
+autocmd InsertLeave * :set relativenumber
+
 " Leader & Mappings
 let g:mapleader = ","
 
