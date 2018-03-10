@@ -100,7 +100,8 @@ let g:NERDTreeIndicatorMapCustom = {
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <ESC>:w<CR>
 
-" Open Magnit
+" Config Magit
+set g:magit_commit_title_limit=140
 nnoremap <C-m> :Magit<CR>
 
 " edit/reload vimrc
