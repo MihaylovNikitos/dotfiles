@@ -88,6 +88,12 @@ set winminheight=5
 nnoremap <C-w>s <C-w>s<C-w>w
 nnoremap <C-w>v <C-w>v<C-w>w
 
+" Easily resize split windows
+nnoremap <C-j> <C-w>1+
+nnoremap <C-k> <C-w>1-
+nnoremap <C-h> <C-w>5<
+nnoremap <C-l> <C-w>5>
+
 " NERDtree
 let g:NERDTreeWinPos = "right"
 map <silent> <C-n> :NERDTreeFocus<CR>
