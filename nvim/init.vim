@@ -152,6 +152,9 @@ let g:gitgutter_eager = 1
 let g:gitgutter_realtime = 1
 autocmd InsertLeave * :GitGutter
 
+" Add key for fast revert
+nmap <Leader>rr <Plug>GitGutterRevertHunk
+
 " Edit/reload vimrc
 nmap <leader>ev :e $MYVIMRC<CR>
 nmap <leader>rv :so $MYVIMRC<CR>
