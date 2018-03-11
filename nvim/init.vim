@@ -35,6 +35,10 @@ set title
 set nobackup
 set noswapfile
 
+" Improve pref vim
+set ttyfast
+set lazyredraw
+
 " UI Config
 set hidden
 set number                   " show line number
@@ -139,9 +143,14 @@ au FocusGained,BufEnter * :silent! !
 let g:magit_commit_title_limit=140
 nnoremap <C-m> :Magit<CR>
 
+" Config GitGutter
+let g:gitgutter_eager = 1
+let g:gitgutter_realtime = 1
+autocmd InsertLeave * :GitGutter
+
 " Edit/reload vimrc
 nmap <leader>ev :e $MYVIMRC<CR>
 nmap <leader>rv :so $MYVIMRC<CR>
 
 " Reset vim
-map <F5> :so $MYVIMRC \| :redraw! \| :noh \| <cr><c-w>=
+map <F5> :so $MYVIMRC \| :redraw! \| :noh \| :GitGutterAll<CR>
