@@ -116,6 +116,16 @@ let g:NERDTreeIndicatorMapCustom = {
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <ESC>:w<CR>
 
+" Autosave only when there is something to save
+function! SaveIfUnsaved()
+    if &modified
+        :silent! w
+    endif
+endfunction
+au FocusLost,BufLeave * :call SaveIfUnsaved()
+" Read the file on focus/buffer enter
+au FocusGained,BufEnter * :silent! !
+
 " Config Magit
 let g:magit_commit_title_limit=140
 nnoremap <C-m> :Magit<CR>
