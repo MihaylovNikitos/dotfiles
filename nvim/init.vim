@@ -74,6 +74,10 @@ let g:mapleader = ","
 nnoremap j gj
 nnoremap k gk
 
+" Fast exit from insertmode
+inoremap qq <Esc>
+inoremap jj <Esc>
+
 " Soft scroll
 set scrolloff=8
 set sidescroll=1
