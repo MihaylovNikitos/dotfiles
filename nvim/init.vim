@@ -120,7 +120,9 @@ inoremap <C-s> <ESC>:w<CR>
 let g:magit_commit_title_limit=140
 nnoremap <C-m> :Magit<CR>
 
-" edit/reload vimrc
+" Edit/reload vimrc
 nmap <leader>ev :e $MYVIMRC<CR>
 nmap <leader>rv :so $MYVIMRC<CR>
 
+" Reset vim
+map <F5> :so $MYVIMRC \| :redraw! \| :noh \| <cr><c-w>=
