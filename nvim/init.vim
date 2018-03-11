@@ -57,6 +57,9 @@ set incsearch " Highlight dynamically as pattern is typed.
 set ignorecase " Ignore case of searches.
 set smartcase " Ignore 'ignorecase' if search pattern contains uppercase characters.
 
+" Hl word under the cursor
+noremap <Space> *N
+
 " Toogle hlsearch
 nnoremap <F3> :set hlsearch!<CR>
 
