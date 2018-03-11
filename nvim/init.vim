@@ -6,10 +6,13 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'easymotion/vim-easymotion'
 Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'rking/ag.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -19,6 +22,11 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'jreybert/vimagit'
+
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdcommenter'
+Plug 'ntpeters/vim-better-whitespace'
 
 call plug#end()
 
@@ -30,6 +38,10 @@ syntax enable
 set background=dark
 let g:gruvbox_contrast_dark = 'soft'
 colorscheme gruvbox
+
+" Config airline
+let g:airline#extensions#tabline#enabled=1
+let g:airline_theme='base16'
 
 " Base config
 set title
@@ -68,6 +80,17 @@ noremap <Space> *N
 " Toogle hlsearch
 nnoremap <F3> :set hlsearch!<CR>
 
+" Hl whitespace
+let g:better_whitespace_enabled=1
+let g:strip_whitespace_on_save=1
+let g:strip_whitelines_at_eof=0
+
+" Config Syntastic
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 " Leader & Mappings
 let g:mapleader = ","
 
@@ -102,6 +125,15 @@ nnoremap <C-j> <C-w>1+
 nnoremap <C-k> <C-w>1-
 nnoremap <C-h> <C-w>5<
 nnoremap <C-l> <C-w>5>
+
+" Config ctrlp
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/]\(.git|node_modules)$',
+    \ 'file': '\v\.(exe|so|dll|pyc)$',
+    \ 'link': 'some_bad_symbolic_links',
+    \ }
 
 " NERDtree
 let g:NERDTreeWinPos = "right"
