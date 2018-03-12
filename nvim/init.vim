@@ -52,6 +52,13 @@ set noswapfile
 set ttyfast
 set lazyredraw
 
+" History
+set history=10000
+set undodir=~/.vim/undodir/
+set undofile
+set undolevels=10000
+set undoreload=10000
+
 " UI Config
 set hidden
 set number                   " show line number
