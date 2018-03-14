@@ -46,6 +46,7 @@ let g:airline_powerline_fonts=0
 let g:airline#extensions#tabline#show_close_button = 0
 
 " Base config
+set encoding=utf-8
 set title
 set nobackup
 set noswapfile
