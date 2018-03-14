@@ -54,6 +54,9 @@ set noswapfile
 set ttyfast
 set lazyredraw
 
+" Quickly time out on keycodes, but never time out on mappings
+set notimeout ttimeout ttimeoutlen=200
+
 " History
 set history=10000
 set undodir=~/.vim/undodir/
