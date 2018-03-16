@@ -23,6 +23,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'jreybert/vimagit'
 
+Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdcommenter'
@@ -79,6 +80,13 @@ set laststatus=2             " window will always have a status line
 set relativenumber
 autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
+
+" Set indent
+filetype indent plugin on
+set autoindent
+
+set softtabstop=2 " insert mode tab and backspace use 2 spaces
+set shiftwidth=2 " normal mode indentation commands use 2 spaces
 
 " Search / replace
 set gdefault " By default add g flag to search/replace. Add g to toggle.
