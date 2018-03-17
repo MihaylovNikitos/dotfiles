@@ -18,6 +18,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'mhinz/vim-startify'
 
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
