@@ -31,6 +31,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'nathanaelkane/vim-indent-guides'
 
+Plug 'mbbill/undotree'
+
 call plug#end()
 
 " Colors
@@ -67,6 +69,8 @@ set undodir=~/.vim/undodir/
 set undofile
 set undolevels=10000
 set undoreload=10000
+
+nnoremap <F2> :UndotreeToggle<CR>
 
 " UI Config
 set hidden
