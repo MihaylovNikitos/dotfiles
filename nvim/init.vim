@@ -14,6 +14,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'rking/ag.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 
+Plug 'christoomey/vim-tmux-navigator'
+
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'scrooloose/nerdtree'
@@ -161,10 +163,10 @@ nnoremap <C-w>s <C-w>s<C-w>w
 nnoremap <C-w>v <C-w>v<C-w>w
 
 " Easily resize split windows
-nnoremap <C-j> <C-w>1+
-nnoremap <C-k> <C-w>1-
-nnoremap <C-h> <C-w>5<
-nnoremap <C-l> <C-w>5>
+nnoremap <C-w>k <C-w>1+
+nnoremap <C-w>j <C-w>1-
+nnoremap <C-w>h <C-w>5<
+nnoremap <C-w>l <C-w>5>
 
 " Config ctrlp
 let g:ctrlp_map = '<c-p>'
@@ -227,7 +229,10 @@ function! SaveIfUnsaved()
         :silent! w
     endif
 endfunction
+
+let g:tmux_navigator_save_on_switch = 1
 au FocusLost,BufLeave * :call SaveIfUnsaved()
+
 " Read the file on focus/buffer enter
 au FocusGained,BufEnter * :silent! !
 

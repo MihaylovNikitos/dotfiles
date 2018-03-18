@@ -27,6 +27,12 @@ alias myip="ifconfig -v eth0 | grep 'inet addr:'"
 alias zshrc="${EDITOR} ~/.zshrc"
 alias reload="exec ${SHELL}"
 
+# Tmux
+alias tx="tmux"
+alias txs="tmux new -s"
+alias txls="tmux ls"
+alias txa="tmux attach -t"
+
 # Other
 alias ehosts="sudo ${EDITOR} /etc/hosts"
 
