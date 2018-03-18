@@ -13,6 +13,9 @@ install_tmux:
 	cd - && \
 	rm -fr /tmp/tmux
 
+install_tmp:
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 link_tmux:
 	ln -sv ${TMUX_DIR}/tmux.conf ~/.tmux.conf || echo "Error link tmux!"
 
