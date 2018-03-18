@@ -163,10 +163,10 @@ nnoremap <C-w>s <C-w>s<C-w>w
 nnoremap <C-w>v <C-w>v<C-w>w
 
 " Easily resize split windows
-nnoremap <C-w>k <C-w>1+
-nnoremap <C-w>j <C-w>1-
-nnoremap <C-w>h <C-w>5<
-nnoremap <C-w>l <C-w>5>
+nnoremap K <C-w>1+
+nnoremap J <C-w>1-
+nnoremap H <C-w>5<
+nnoremap L <C-w>5>
 
 " Config ctrlp
 let g:ctrlp_map = '<c-p>'
