@@ -34,7 +34,7 @@ alias txls="tmux ls"
 alias txa="tmux attach -t"
 
 # Other
-alias ehosts="sudo ${EDITOR} /etc/hosts"
-
+alias eh="sudo ${EDITOR} /etc/hosts"
+alias dns-flush="sudo /etc/init.d/nscd restart"
 # Include local aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
